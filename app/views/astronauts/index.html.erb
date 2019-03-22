@@ -1,0 +1,16 @@
+<section class='astronaut-ctn'>
+<%= @astronauts.each do |astronaut| %>
+  <section class='astronaut-card' >
+    <h1>Name: <%= astronaut.name %></h1>
+    <p>Age: <%= astronaut.age %></p>
+    <p>Job: <%= astronaut.job %></p>
+    <% astronaut.sort_missions.each do |mission| %>
+      <p><%= mission %></p>
+    <% end %>
+  </section>
+<% end %>
+</section>
+
+<section class='statistics'>
+  <p>Average Age: <%= @astronauts.average_age %></p>
+</section>
